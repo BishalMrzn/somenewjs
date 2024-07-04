@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let compguess = Math.random() * 10;
+      compguess = Number.parseInt(compguess);
+      let yourguess = -1;
+      let numofguess = 0;
+      console.log(compguess);
+      while (compguess != yourguess) {
+        yourguess = prompt("Try your luck");
+        console.log("Your Guess:", yourguess);
+        numofguess = numofguess + 1;
+        // console.log(numofguess);
+        if (compguess < yourguess) {
+          console.log("Guess lower number");
+        } else if (compguess > yourguess) {
+          console.log("Guess higher Number");
+        } else if (compguess == yourguess) {
+          console.log("Congratulatons");
+        } else {
+          console.log("invalid number");
+        }
+      }
+      let score = 10 - numofguess;
+
+      console.log(`Your final score is:10-${numofguess}=`, score);
+    </script>
+  </body>
+</html>

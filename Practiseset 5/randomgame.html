@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let guess = Math.random() * 10;
+      guess = Number.parseInt(guess);
+      let your_guess = -1;
+      let tracker = 0;
+      do {
+        your_guess = prompt("Enter a value");
+        console.log("winning guess", guess);
+        console.log("Your guess", your_guess);
+        tracker = tracker + 1;
+        console.log(guess == your_guess ? "true" : "false");
+        if (guess < your_guess) {
+          console.log("Try lower number");
+        } else if (guess > your_guess) {
+          console.log("Try higher number");
+        }
+        // console.log(a);
+      } while (guess != your_guess);
+      console.log("Congrats");
+      let score = 10 - tracker;
+      console.log(score);
+    </script>
+  </body>
+</html>

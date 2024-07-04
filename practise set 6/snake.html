@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let game = prompt("Snake,water or gun?");
+      let arr = ["Snake", "Water", "Gun"];
+      let comchoice = arr[Math.floor(Math.random() * arr.length)];
+      console.log(comchoice);
+      if ("Snake" == comchoice && "Water" == game) {
+        alert("You win");
+      } else if ("Gun" == comchoice && "Water" == game) {
+        alert("You win");
+      } else if ("Gun" == comchoice && "Gun" == game) {
+        alert("Draw");
+      } else if ("Gun" == comchoice && "Snake" == game) {
+        alert("You lose");
+      } else if ("Snake" == comchoice && "Snake" == game) {
+        alert("You draw");
+      } else if ("Snake" == comchoice && "Gun" == game) {
+        alert("You win");
+      } else if ("Water" == comchoice && "Water" == game) {
+        alert("You draw");
+      } else if ("Water" == comchoice && "Gun" == game) {
+        alert("You lose");
+      } else if ("Water" == comchoice && "Snake" == game) {
+        alert("You win");
+      } else {
+        alert.console.error("You stoopid");
+      }
+    </script>
+  </body>
+</html>

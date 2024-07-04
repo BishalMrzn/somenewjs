@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let game = prompt("Choose Snake Water or Gun");
+      let choices = ["Snake", "Water", "Gun"];
+      let compchoice = choices[Math.floor(Math.random() * choices.length)];
+      console.log(compchoice);
+      if (compchoice === game) {
+        alert("Draw");
+      }
+      let wincondition = {
+        Snake: "Water",
+        Gun: "Snake",
+        Water: "Gun",
+      };
+      if (wincondition[game] === compchoice) {
+        alert("You win");
+      } else {
+        alert("You lose");
+      }
+    </script>
+  </body>
+</html>
